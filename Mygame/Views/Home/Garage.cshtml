@@ -1,0 +1,31 @@
+﻿@model Allplayerdata
+@*
+*@
+@{
+    string[] AllMap = { "forest", "Ukraine road", "Europe road" };
+}
+<div class= "garage-panel ">
+    <div class=" row ">
+        <div class=" col-md-4 offset-md-4 ">
+            <h1>Your Garage</h1>
+            <form method="post" asp-controller="Home" asp-action="Garage">
+                <h2>@Model.languageplayer.Chousemap</h2>
+                @foreach (string map in AllMap)
+                {
+                    <input name="map" type="submit" value="@map">
+                }
+
+
+                <h2>@Model.languageplayer.Chousecar</h2>
+
+                <input name="car" type="submit" value="zaz">
+                <input name="car" type="submit" value="vepr">
+                <input name="car" type="submit" value="Lada 2106">
+                <input name="car" type="submit" value="fiat">
+                <input name="car" type="submit" value="lamborghini">
+
+            </form>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"> @Model.languageplayer.ConfigBack  </a>
+        </div>
+    </div>
+</div>

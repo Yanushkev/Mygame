@@ -1,0 +1,20 @@
+﻿@model Allplayerdata
+@{
+    ViewData["Title"] = "Main menu";
+}
+<div class="index-panel ">
+    <div class="text-center">
+        <h1 class="display-4">@Model.languageplayer.Welcome , @Model.Playername </h1>
+        <h3 class="display-4">@Model.languageplayer.Yourmap - @Model.Playermap </h3>
+        <h3 class="display-4">@Model.languageplayer.Yourcar - @Model.Playercar </h3>
+
+
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Play">@Model.languageplayer.Play</a></br>
+
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Garage">@Model.languageplayer.Garage</a></br>
+
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Settings">@Model.languageplayer.Settings</a></br>
+    
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@Model.languageplayer.Privacy</a></br>
+    </div>
+</div>
